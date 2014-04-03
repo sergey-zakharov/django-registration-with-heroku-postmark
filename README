@@ -1,12 +1,13 @@
-.. -*-restructuredtext-*-
-
 This is a fairly simple user-registration application for Django,
-designed to make allowing user signups as painless as possible. It
-requires a functional installation of Django 1.4 or newer, but has no
-other dependencies.
+designed to make allowing user signups as painless as possible.
+This version is modification of official django-registration fork 
+https://bitbucket.org/jbzdak/django-registration-merge-repo/commits/06a5a625d959694b8d1eec7601e8aa74f0ae60f9
+
+It requires a functional installation of Django 1.5 with deployment 
+on Heroku and add-on Postmark.
 
 For installation instructions, see the file "INSTALL" in this
 directory; for instructions on how to use this application, and on
 what it provides, see the file "quickstart.rst" in the "docs/"
-directory. Full documentation is also `available online
-https://django-registration.readthedocs.org/`_
+directory. Full documentation is also available online
+https://django-registration.readthedocs.org/
