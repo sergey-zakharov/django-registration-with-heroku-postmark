@@ -291,10 +291,10 @@ class RegistrationProfile(models.Model):
         message = render_to_string('registration/activation_email.txt',
                                    ctx_dict)
         
-        message = PMMail(api_key = os.environ.get('POSTMARK_API_KEY'),
-                 subject = "Создан аккаунт на " + service_name,
-                 sender = sender,
-                 to = user.email,
+        message = PMMail(api_key = settings.POSTMARK_API_KEY,
+                 subject = settings.ACCOUNT_CREATED_TEXT + service_name,
+                 sender = settings.DEFAULT_FROM_EMAIL,
+                 to = self.user.email,
                  text_body = message,
                  tag = service_name.lower())
 
